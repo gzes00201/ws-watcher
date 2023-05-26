@@ -1,0 +1,19 @@
+<mat-list *ngFor="let item of msgList">
+  <mat-expansion-panel>
+      <mat-expansion-panel-header >
+        <mat-panel-title class="message_box" [class.is-error]="item.level === LogLevel.ERROR" >
+            <div>EVENT： {{item.event}} </div>
+            <div>時間： [{{item.timestamp | date: 'YYYY-MM-dd hh:mm:ss'}}] </div>
+            <div>{{item.msg}}</div>
+        </mat-panel-title>
+
+      </mat-expansion-panel-header>
+
+    <div class="msgBox" >
+      <div>
+        <ngx-json-viewer  class="details-content-data" [json]="item"></ngx-json-viewer>
+      </div>
+    </div>
+  </mat-expansion-panel>
+    <mat-divider></mat-divider>
+</mat-list>

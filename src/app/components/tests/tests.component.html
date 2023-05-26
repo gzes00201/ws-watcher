@@ -1,0 +1,10 @@
+<mat-tab-group [(selectedIndex)]="selectedIndex" (selectedTabChange)="hh($event)">
+    <mat-tab label="遊戲監控">
+        <app-playresult [selectedIndex]="selectedIndex" (history)="goHistory()"></app-playresult>
+    </mat-tab>
+    <mat-tab label="錯誤歷史">
+      <app-play-result-history [selectedIndex]="selectedIndex"></app-play-result-history> 
+      
+    </mat-tab>
+    <mat-tab label="事件輸出"> <app-message-box [msgList]="eventMsgList"></app-message-box></mat-tab>
+</mat-tab-group>

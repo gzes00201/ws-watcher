@@ -1,0 +1,88 @@
+.mat-list
+  overflow: auto
+  color: #fff
+.result_link
+  position: absolute
+  margin: 8px 0 0 8px
+  font-size:20px
+  &.wrong
+    color: #fff
+.result_item_link
+  width: 25px
+  height: 25px
+  color: #fff
+  background-color: rgb(244, 67, 54)
+  border-radius: 50%
+  line-height: 25px
+  text-align: center
+.result_papers
+  position: relative
+  margin: 20px
+  background-image: url(/assets/images/result_papers_bg.png)
+  background-repeat: no-repeat
+  background-size: contain
+  &::before
+    content: ''
+    position: absolute
+    top: 5px
+    border-top: 100px solid #47f4dc
+    border-width: 60px 60px 0px
+    border-style: solid solid none none
+    border-color: #47f4dc transparent transparent
+
+.result_papers.wrong
+  &::before
+    border-color: rgb(244, 67, 54) transparent transparent
+.result_titleBox
+  display: flex
+  margin-left: -4px
+
+.result_papers_title
+  border-top: 100px solid #47f4dc
+  height: 0
+  font-size: 18px
+  line-height: 36px
+  margin-left: 30px
+  border-width: 0 0 37px 37px
+  border-style: none solid solid
+  border-color: transparent transparent #47f4dc
+  padding-right: 20px
+  &.wrong
+    border-color: transparent transparent rgb(244, 67, 54)
+    color: #fff
+.icon_bg
+  background-color: #6F64F8
+  width: 30px
+  border-radius: 50%
+  height: 30px
+  line-height: 30px
+  text-align: center
+  &::before
+    content: ''
+    border-radius: 50%
+    background-color: #25D0C9
+
+.test-item
+  display: flex
+  align-items: center
+  .mat-icon
+    margin-right: 10px
+    opacity: 0
+    &.state-active
+        opacity: 1
+        color: write
+
+.time
+  font-size: 18px
+  color: white
+  border-radius: 50%
+  background-color: #0F1642
+  width: 30px
+  height: 30px
+  line-height: 30px
+  text-align: center
+  border: 3px solid #00BEFF
+  margin-left: 8px
+.result-btn 
+  width: 150px
+  margin-left: 20px

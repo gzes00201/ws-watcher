@@ -1,0 +1,94 @@
+.card_title
+  color: #00FFFF
+  font-size: 20px
+  position: absolute
+  top: 30px
+  left: 21px
+.text-normal,.text-conected,.text-unknow,.text-closed
+  color: #FFBA00
+  font-size: 22px
+  position: absolute
+  bottom: 70px
+  right: 55px
+.text-normal-bg,.text-conected-bg,.text-unknow-bg,.text-closed-bg
+  color: #00afee42
+  font-size: 70px
+  position: absolute
+  bottom: 33px
+
+.statenumbox
+  position: relative
+  display: flex
+  padding-top: 46px
+  height: 216px
+  background-repeat: no-repeat
+  background-size: contain
+  background-position: center -10px
+  background-image: url(/assets/images/state_light.png)
+
+
+.light
+  width: 140px
+  height: 121px
+  position: absolute
+  top: 100px
+  text-align: center
+  background-image: url(/assets/images/light.png)
+  left: 283px
+  background-repeat: no-repeat
+  animation-name: blink
+  animation-duration: 2.5s
+  animation-iteration-count: infinite
+
+
+
+.eventBox
+  width: 50%
+  height: 66px
+  border-radius:8px
+  color: #fff
+  font-size: 44px
+
+.event_title
+  color: #00FFFF
+  font-size: 16px
+  margin-bottom: 10px
+
+.event_num,.result_num
+  width: 50%
+  height: 66px
+  border-radius:8px
+  color: #fff
+  font-size: 44px
+  font-weight: bold
+  margin: 0 auto
+  line-height: 66px
+
+.event_num
+  background: linear-gradient(354deg, #E43E3E,  #F86A5A ,#FF8370)
+
+.result_num
+  background: linear-gradient(354deg,#0F7B6D,  #15A18F ,#49BEAC)
+
+@keyframes blink
+  0%
+    transform: translateY(10px)
+    opacity: 1
+  50%
+    transform: translateY(-64px) scale(6)
+    opacity: 0.2
+  100%
+    transform: translateY(10px)  scale(0)
+    opacity: 1
+
+
+
+
+
+#rocket.closed
+    transform: rotateZ(317deg)
+    #Path_34
+        transform: translate(-4px, 3px)
+        fill: black
+    #Path_33
+        fill: black

@@ -1,0 +1,24 @@
+<div class="contol-panel">
+    <mat-card [appearance]="'raised'" >
+        <mat-card-header>
+          <mat-card-title>控制面板</mat-card-title>
+          <!-- <mat-card-subtitle>設定檔: assets/config/base.json</mat-card-subtitle> -->
+        </mat-card-header>
+        <mat-card-content>
+            <mat-form-field appearance="fill" >
+                <mat-label>domain</mat-label>
+                <input matInput placeholder="domain" [(ngModel)]="config.domain">
+            </mat-form-field>
+            <mat-form-field appearance="fill" >
+                <mat-label>port</mat-label>
+                <input matInput placeholder="port" [(ngModel)]="config.port">
+            </mat-form-field>
+            <mat-card-actions>
+              <button mat-raised-button color="primary" (click)="link()" [disabled]="isGusherConnected || linking" >連線</button>
+              <button mat-raised-button color="warn"  (click)="disconnected()">中斷</button>
+            </mat-card-actions>
+        </mat-card-content>
+
+      </mat-card>
+</div>
+

@@ -1,0 +1,21 @@
+<mat-list>
+  <mat-expansion-panel *ngFor="let log of logs">
+    <mat-expansion-panel-header>
+      <ng-container *ngIf="log.isRead == false">
+        <span class="new_item">{{' 新! '}} </span>
+      </ng-container>
+      <mat-panel-title class="result_date"> {{log.timestamp | date:'yyyy-MM-dd HH:mm:ss'}} </mat-panel-title>
+      <mat-panel-title  class="result_title"> {{log.msg.slice(0,4)}} </mat-panel-title>
+      <mat-panel-title  class="result_title"> {{log.id.slice(0,4)}} </mat-panel-title>
+      <mat-panel-title  class="result_message">  {{log.id.slice(4)}}
+        <br>
+        {{log.msg.slice(6)}}</mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="msgBox" *ngFor="let item of log.history">
+      <div  class="close_title">{{item.event}} </div>
+      <div class="close_title" >{{item.date | date:'yyyy-MM-dd HH:mm:ss'}}</div>
+      <div  class="close_title">{{item.msg}}</div>
+    </div>
+  </mat-expansion-panel>
+    <mat-divider></mat-divider>
+</mat-list>

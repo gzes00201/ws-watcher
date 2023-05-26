@@ -1,0 +1,22 @@
+
+<ng-container *ngFor="let describeItem of list">
+  <ng-container *ngFor="let testItem of describeItem.list">
+    <mat-list class="result_papers"  [class.wrong]="getStatesTotalErrorCount(testItem.tester.states) > 0">
+      <a class="result_link" [class.wrong]="getStatesTotalErrorCount(testItem.tester.states) > 0">{{getStatesTotalErrorCount(testItem.tester.states)}}</a>
+      <div class="result_titleBox">
+        <h3 class="result_papers_title"  [class.wrong]="testItem.tester.expectTester.error !==''">{{testItem.caseTitle}}</h3>
+        <button mat-raised-button color="warn"  class="result-btn" (click)="change()">流程錯誤</button>
+        <button mat-raised-button color="warn"  class="result-btn"  (click)="changeData()">資料錯誤</button>
+      </div>
+      <mat-list>
+        <mat-list-item *ngFor="let state of testItem.tester.states,let i = index" class="test-item" >
+              <mat-icon class="icon_bg" aria-hidden="false" fontIcon="done" [class.state-active]="state.state === testItem.tester.promiseService.state.value "></mat-icon>
+              {{state.state}}
+              <a class="result_item_link" href="javascript:;" (click)="goHistory(state)" *ngIf="state.errors.length > 0">{{state.errors.length}}</a>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+      </mat-list>
+    </mat-list>
+</ng-container>
+
+

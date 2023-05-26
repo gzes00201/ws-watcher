@@ -1,0 +1,29 @@
+<!-- Highlight Card -->
+<div class="card highlight-card card-small">
+  <div class="card_title">連線狀態：</div>
+  <span
+    [class.text-normal-bg]="gusehrState === state.NONE"
+    [class.text-conected-bg]="gusehrState === state.CONNECTED"
+    [class.text-unknow-bg]="gusehrState === state.UNKNOWN"
+    [class.text-closed-bg]="gusehrState === state.COLSED" >{{ msgbg }}
+  </span>
+    <span
+        [class.text-normal]="gusehrState === state.NONE"
+        [class.text-conected]="gusehrState === state.CONNECTED"
+        [class.text-unknow]="gusehrState === state.UNKNOWN"
+        [class.text-closed]="gusehrState === state.COLSED" >{{ msg }}</span>
+</div>
+
+<div class="statenumbox">
+  <div class="eventBox">
+    <div class="event_title">流程錯誤</div>
+    <div class="event_num">{{processErrorCount}}</div>
+  </div>
+  <div class="eventBox">
+    <div class="event_title">資料錯誤</div>
+    <div class="result_num">{{dataErrorCount}}</div>
+  </div>
+  <div class="light"></div>
+</div>
+
+
